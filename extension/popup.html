@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Transcript Q&amp;A</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="brand">
+        <span class="brand-icon" aria-hidden="true"><span></span></span>
+        <div>
+          <p class="eyebrow">VIDEO COMPANION</p>
+          <h1>Tube<span>Talk</span></h1>
+        </div>
+        <span class="local-badge"><i></i> LOCAL</span>
+      </header>
+      <p class="intro">Ask anything about the video you’re watching.</p>
+      <label for="video-url">YouTube URL</label>
+      <input id="video-url" type="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="url">
+      <label for="question">Your question</label>
+      <textarea id="question" rows="3" placeholder="What is the main idea of this video?"></textarea>
+      <button id="ask" type="button"><span>Ask about this video</span><span class="arrow" aria-hidden="true">↗</span></button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <section id="answer" aria-label="Answer" hidden>
+        <p id="answer-meta"></p>
+        <div id="answer-text"></div>
+      </section>
+      <footer class="note"><span class="note-mark">✦</span> Answers grounded in available captions</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
